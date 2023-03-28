@@ -4,7 +4,7 @@ import (
     "testing"
 )
 
-func TestCelsiusToFahrenheitString(t testing.T) {
+func TestCelsiusToFahrenheitString(t *testing.T) {
     type test struct {
         input string
         want string
@@ -15,8 +15,8 @@ func TestCelsiusToFahrenheitString(t testing.T) {
         {input: "0", want: "32.0"},
     }
 
-    for , tc := range tests {
-        got,  := CelsiusToFahrenheitString(tc.input)
+    for _, tc := range tests {
+        got, _ := CelsiusToFahrenheitString(tc.input)
         if !(tc.want == got) {
             t.Errorf("expected %s, got: %s", tc.want, got)
         }
@@ -35,8 +35,8 @@ func TestCelsiusToFahrenheitLine(t *testing.T) {
         //{input: "Kjevik;SN39040;18.03.2022 01:50", want: ""},
     }
 
-    for , tc := range tests {
-        got,  := CelsiusToFahrenheitLine(tc.input)
+    for _, tc := range tests {
+        got, _ := CelsiusToFahrenheitLine(tc.input)
         if !(tc.want == got) {
             t.Errorf("expected %s, got: %s", tc.want, got)
         }

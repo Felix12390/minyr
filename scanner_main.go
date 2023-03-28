@@ -48,7 +48,7 @@ func main() {
             elementArray := strings.Split(string(linebuf), ";")
             if len(elementArray) > 3 {
                 celsius := elementArray[3]
-                fahr := conv.CelsiusToFahrenheit(celsius)
+                fahr := conv.CelsiusToFarhenheit(celsius)//feil i funtemps
                 log.Println(elementArray[3])
             }
             linebuf = nil
