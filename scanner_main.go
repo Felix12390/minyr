@@ -8,7 +8,7 @@ import (
     //"strings"
     //"github.com/Felix12390/Funtemps/conv"
 )
-func main() {
+func scannerMain() {
     src, err := os.Open("table.csv")
     //src, err := os.Open("kjevik-temp-celsius-20220318-20230318.csv")
     if err != nil {
