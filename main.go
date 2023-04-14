@@ -40,9 +40,11 @@ func main() {
                         os.Remove("kjevik-temp-fahr-20220318-20230318.csv")
                         yr.ConvertCelsiusFileToFahrenheitFile()
                         yr.EditLastLine("kjevik-temp-fahr-20220318-20230318.csv")
+                        fmt.Println("Ferdig å generere og convertere")
                     } else if inputConv == "n" {
                         yr.ConvertCelsiusFileToFahrenheitFile()
                         yr.EditLastLine("kjevik-temp-fahr-20220318-20230318.csv")
+                        fmt.Println("Ferdig å konvertere")
                     } else {
                         fmt.Println("Venligst velg mellom 'j' for å genere en ny fil eller 'n' for å beholde eksisterende")
                     }
@@ -53,7 +55,7 @@ func main() {
                 fmt.Println("Nå har du konvertert fra celsius til fahrenheit")
             }
         } else if input == "average" {
-            fmt.Println("Finn ut gjennomsnittstemperaturen. Velg 'c' for å få gradene i celsius eller 'f' for å få de i fahrenheit")
+            fmt.Println("Velg mellom: 'q/exit' for å gå ut, 'c' for å få gjennomsnitt i celsius eller 'f' for å få gjenomsnitt i fahrenheit")
             var inputAvg string
             scannerAvg := bufio.NewScanner(os.Stdin)
             for scannerAvg.Scan() {
@@ -68,7 +70,7 @@ func main() {
                         fmt.Printf("Error: %v\n", err)
                         return
                     }
-                    fmt.Printf("Average of fourth elements: %v\n", avg)
+                    fmt.Printf("Gjennomsnittstemperaturen er: %v\n", avg)
 
 
                 } else if inputAvg == "f" {
@@ -77,7 +79,7 @@ func main() {
                         fmt.Printf("Error: %v\n", err)
                         return
                     }
-                    fmt.Printf("Average of fourth elements: %v\n", avg)
+                    fmt.Printf("Gjennomsnittstemperaturen er: %v\n", avg)
                 } else if inputAvg != "c" && inputAvg != "f"{
                     fmt.Println("Venligst velg mellom 'c' eller 'f'")
                 }

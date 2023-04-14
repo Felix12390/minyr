@@ -250,7 +250,7 @@ func ReadLastLine(filePath string)(string, error) {
 
 
     // Sjekker at den siste linjen inneholder forventet string:
-    expectedString := "Data er gyldig per 20.03.2023 (CC BY 4.0), Meteorologisk institutt (MET);endringen er gjort av Felix Andersen"
+    expectedString := "Data er gyldig per 18.03.2023 (CC BY 4.0), Meteorologisk institutt (MET);endringen er gjort av Felix Andersen"
     if strings.Contains(lastLine, expectedString) {
         return lastLine, nil
     }
